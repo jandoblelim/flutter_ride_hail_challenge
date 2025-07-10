@@ -1,16 +1,49 @@
 # flutter_ride_hail_challenge
 
-A new Flutter project.
+Ride-hailing app UI challenge. Built this to practice Flutter and state management.
 
-## Getting Started
+## Quick Start
 
-This project is a starting point for a Flutter application.
+1. Get dependencies:
+   ```sh
+   flutter pub get
+   ```
 
-A few resources to get you started if this is your first Flutter project:
+2. Run on Chrome:
+   ```sh
+   flutter run -d chrome
+   ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+3. For Android (if you have an emulator):
+   ```sh
+   flutter run -d <device_id>
+   ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. Desktop:
+   ```sh
+   flutter run -d windows
+   ```
+
+## What's Used
+
+- provider: for state management (keeps things simple)
+- cupertino_icons: just for icons
+- flutter/material.dart: the usual stuff
+
+## How It Works
+
+Pretty straightforward - Provider handles all the state, UI just shows stuff and calls methods. When you tap something, it updates the provider, UI rebuilds automatically.
+
+## Files
+
+- `lib/providers/ride_hail_provider.dart` — all the logic lives here
+- `lib/screens/` — main screens
+- `lib/components/` — reusable bits
+
+## Tests
+
+```sh
+flutter test
+```
+
+Basic tests for the provider. Could add more later.
